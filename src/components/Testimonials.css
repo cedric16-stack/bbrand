@@ -1,0 +1,135 @@
+.testimonials {
+  background: var(--color-royal-blue);
+  position: relative;
+  overflow: hidden;
+}
+
+.testimonials::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: var(--gradient-radial-glow);
+  opacity: 0.5;
+}
+
+.testimonials-inner {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+}
+
+.testimonials-inner .section-label {
+  color: var(--color-electric-blue-light);
+}
+
+.testimonials-inner h2 {
+  color: var(--color-white);
+  margin-top: 0.5rem;
+  margin-bottom: var(--space-lg);
+}
+
+.testimonials-carousel {
+  max-width: 700px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.testimonials-quote-icon {
+  font-size: 2.5rem;
+  color: var(--color-electric-blue);
+  opacity: 0.5;
+  margin-bottom: var(--space-sm);
+}
+
+.testimonial-slide {
+  min-height: 200px;
+}
+
+.testimonial-review {
+  font-family: var(--font-body);
+  font-weight: 400;
+  font-size: clamp(1.1rem, 2vw, 1.4rem);
+  color: var(--color-white);
+  line-height: 1.5;
+  margin-bottom: var(--space-md);
+}
+.testimonial-author {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+@media (max-width: 420px) {
+  .testimonial-author {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .testimonial-name,
+  .testimonial-company {
+    text-align: center;
+  }
+}
+.testimonial-photo-placeholder {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: var(--gradient-blue);
+  color: var(--color-white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 1.1rem;
+  flex-shrink: 0;
+}
+
+.testimonial-name {
+  color: var(--color-white);
+  font-weight: 600;
+  text-align: left;
+}
+
+.testimonial-company {
+  color: var(--color-mid-gray);
+  font-size: 0.85rem;
+  text-align: left;
+}
+
+.testimonials-controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: var(--space-lg);
+}
+
+.testimonials-controls button {
+  color: var(--color-white);
+  opacity: 0.7;
+  transition: var(--transition-fast);
+}
+
+.testimonials-controls button:hover {
+  opacity: 1;
+}
+
+.testimonials-dots {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.testimonials-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.3);
+  transition: var(--transition-fast);
+}
+
+.testimonials-dot.active {
+  background: var(--color-electric-blue-light);
+  width: 24px;
+  border-radius: var(--radius-full);
+}

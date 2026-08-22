@@ -1,0 +1,78 @@
+.process-header {
+  max-width: 650px;
+  margin: 0 auto var(--space-xl);
+  text-align: center;
+}
+
+.process-header h2 {
+  margin-top: 0.5rem;
+}
+
+.process-timeline {
+  position: relative;
+}
+
+.process-line {
+  position: absolute;
+  top: 28px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: var(--gradient-blue);
+  transform-origin: left;
+  display: none;
+}
+
+.process-steps {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-md);
+  position: relative;
+  z-index: 1;
+}
+
+.process-step {
+  text-align: left;
+}
+
+.process-number {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+    background: var(--bg-surface);
+
+  color: var(--text-heading);
+  border: 2px solid var(--color-electric-blue);
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 1.1rem;
+  margin-bottom: var(--space-sm);
+  box-shadow: var(--shadow-soft);
+}
+
+.process-step h3 {
+  margin-bottom: 0.5rem;
+}
+
+.process-step p {
+  font-size: 0.9rem;
+}
+
+/* Show connecting line only on wider screens where steps are in a row */
+@media (min-width: 901px) {
+  .process-line {
+    display: block;
+  }
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 900px) {
+  .process-steps {
+    grid-template-columns: 1fr;
+    gap: var(--space-lg);
+  }
+}
